@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="w3.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+.w3-row-padding.w3-padding-16.w3-center .w3-third .w3-ul.w3-hoverable .w3-padding-16 span {
+	text-align: justify;
+}
+#apDiv4 {
+	position: fixed;
+	left: 2px;
+	top: 30px;
+	width: 99.5%;
+	height: auto;
+	z-index: 2;
+}
+#myInput {
+	background-image: url('/css/searchicon.png');
+	background-position: 10px 12px;
+	background-repeat: no-repeat;
+	width: 100%;
+	font-size: 16px;
+	padding: 12px 20px 12px 40px;
+	border: 1px solid #ddd;
+	margin-bottom: 12px;
+	position: fixed;
+}
+.w3-top .w3-white.w3-xlarge .w3-center.w3-padding-16 div {
+	color: #FFF;
+}
+.w3-top .w3-white.w3-xlarge .w3-button.w3-padding-16.w3-left {
+	color: #FFF;
+}
+.w3-top .w3-white.w3-xlarge .w3-right.w3-padding-16 {
+	color: #FFF;
+}
+</style>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Food</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+</nav>
+
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-right w3-padding-16"><img SRC="images/logo.png" BORDER=0 height=34 width=56>
+</div>
+    <div class="w3-left w3-padding-16"><a href="#" onclick="history.back();return false"><img SRC="images/back.gif" BORDER=0 height=42 width=73></a>
+</div>
+    <div class="w3-center w3-padding-16">
+      <div align="center">Course Notes</div>
+    </div>
+  </div>
+</div>
+<div class="w3-row-padding w3-padding-16 w3-center">
+  <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<div id="myDIV">
+<ul id="myUL">
+  <li><a href="Valera/error.html">Amplifier </a></li>
+  <li><a href="pages/Amplitude Modulation Tutorial.html">Amplitude Modulation </a></li>
+
+  <li><a href="pages/tutorials-sub  (2).html">Average</a></li>
+  <li><a href="pages/tutorials-sub  (3).html">Circuit Diagrams</a></li>
+
+
+
+
+</ul>
+</div>
+</div>
+
+
+
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myDIV *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myDIV *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+</html>
